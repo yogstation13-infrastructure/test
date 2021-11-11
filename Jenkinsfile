@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh 'cat /etc/os-release'
         sh 'cat /etc/passwd'
+        echo 'hey'
       }
     }
 
