@@ -3,11 +3,11 @@ pipeline {
 
   stages {
     stage("test") {
-        container("kaniko") {
-            sh "/kaniko/executor --help"
-            echo "meow"
-        }
         steps {
+            container("kaniko") {
+                sh "/kaniko/executor --help"
+                echo "meow"
+            }
             sh "cat /etc/os-release"
             exec "hi from brazil"
         }
