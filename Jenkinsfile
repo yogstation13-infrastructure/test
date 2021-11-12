@@ -9,7 +9,7 @@ pipeline {
                 echo "meow"
             }
             sh "cat /etc/os-release"
-            exec "hi from brazil"
+            echo "hi from brazil"
         }
     }
   }
