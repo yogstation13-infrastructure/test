@@ -5,8 +5,7 @@ pipeline {
     stage("test") {
       steps {
         container("kaniko")
-        sh "cat /etc/os-release"
-        sh "cat /etc/passwd"
+        sh "/kaniko/executor --help"
         echo "meow"
       }
     }
