@@ -5,7 +5,8 @@ pipeline {
     stage("test") {
         steps {
             container("kaniko") {
-                sh "/kaniko/executor --help"
+                sh "pwd"
+                //sh "/kaniko/executor --cache -c . "
                 echo "meow"
             }
             sh "cat /etc/os-release"
