@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  node('kaniko')
   containerTemplate(name: 'busybox', image: 'busybox', command: 'sleep', args: '99d')
 
   stages {
