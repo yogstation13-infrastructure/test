@@ -6,7 +6,7 @@ pipeline {
       steps {
         container("kaniko") {
           sh "pwd"
-          sh "/kaniko/executor --cache --context=dir://. --destination=quay.yogstation.net/yogstation13/test"
+          sh "/kaniko/executor --cache --context=dir://. --destination=quay.yogstation.net/yogstation/test"
           echo "meow"
         }
         sh "cat /etc/os-release"
