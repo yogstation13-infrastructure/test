@@ -17,6 +17,7 @@ pipeline {
       input {
         message: "Kill Pod"
       }
+      steps {}
     }
   }
 }
