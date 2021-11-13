@@ -15,9 +15,11 @@ pipeline {
     }
     stage("Wait for dismissal") {
       input {
-        message: "Kill Pod"
+        message "Kill Pod"
       }
-      steps {}
+      steps {
+        echo "Pod will be released"
+      }
     }
   }
 }
