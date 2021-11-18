@@ -5,7 +5,6 @@ pipeline {
     stage("test") {
       steps {
         container("kaniko") {
-          sh "pwd"
           sh "/kaniko/executor --cache --context=dir://. --destination=quay.yogstation.net/yogstation/test"
           echo "meow"
         }
